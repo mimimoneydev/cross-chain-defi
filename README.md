@@ -415,7 +415,7 @@ graph TD
 ### Prerequisites
 - Node.js v18+ and npm/yarn/bun
 - Git
-- MetaMask or similar Web3 wallet
+- MetaMask
 - Testnet ETH for various chains
 
 ### Quick Start
@@ -429,30 +429,30 @@ cd cross-chain-defi
 2. **Install Dependencies**
 ```bash
 # Install contract dependencies
-cd contracts
+cd smart-contracts
 bun install
 
 # Install frontend dependencies
-cd ../frontend-crosschaindefi
+cd ../frontend
 bun install
 ```
 
 3. **Environment Setup**
 ```bash
 # Copy environment templates
-cp contracts/.env.example contracts/.env
+cp smart-contracts/.env.example smart-contracts/.env
 cp frontend-crosschaindefi/env.template frontend-crosschaindefi/.env.local
 
 # Edit environment variables
-nano contracts/.env
-nano frontend-crosschaindefi/.env.local
+nano  vcontracts/.env
+nano frontend/.env.local
 ```
 
 4. **Deploy Contracts**
 ```bash
-cd contracts
+cd smart-contracts
 
-# Compile contracts
+# Compile smart contracts
 bunx hardhat compile
 
 # Deploy to testnet (e.g., Avalanche Fuji)
@@ -461,7 +461,7 @@ bunx hardhat run scripts/deploy.js --network fuji
 
 5. **Start Frontend**
 ```bash
-cd ../frontend-crosschaindefi
+cd ../frontend
 bun run dev
 ```
 
@@ -535,7 +535,7 @@ frontend-crosschaindefi/
 ### Running the Frontend
 
 ```bash
-cd frontend-crosschaindefi
+cd frontend
 
 # Development server
 bun run dev
